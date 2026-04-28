@@ -4,6 +4,8 @@
 
 This is a **public portfolio showcase** for SquadBrain. It is intentionally not a full production source dump. The live/private implementation, credentials, data pipelines, and operational details are kept private.
 
+![SquadBrain demo](assets/squadbrain-demo.gif)
+
 ![SquadBrain screenshot contact sheet](screenshots/00-screenshot-contact-sheet.jpg)
 
 ## Why this project exists
