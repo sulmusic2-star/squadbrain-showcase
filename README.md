@@ -8,6 +8,8 @@ This is a **public portfolio showcase** for SquadBrain. It is intentionally not 
 
 ![SquadBrain screenshot contact sheet](screenshots/00-screenshot-contact-sheet.jpg)
 
+Live demo: https://sulmusic2-star.github.io/squadbrain-showcase/
+
 ## Why this project exists
 
 Most sports trivia games test facts after the fact. SquadBrain is built around a more specific loop:
