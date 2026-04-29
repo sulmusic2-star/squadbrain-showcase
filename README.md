@@ -1,5 +1,7 @@
 # SquadBrain — Sports Roster Memorization Game
 
+[![SquadBrain examples CI](https://github.com/sulmusic2-star/squadbrain-showcase/actions/workflows/ci.yml/badge.svg)](https://github.com/sulmusic2-star/squadbrain-showcase/actions/workflows/ci.yml)
+
 > A mobile sports-learning game built around roster memory, quick-match competition, achievement loops, and cross-device progression.
 
 SquadBrain turns roster knowledge into a repeatable game loop: pick a team, practice recall, play quick rounds, compete on results, and come back through streaks, achievements, rank movement, and friend challenges.
@@ -62,7 +64,7 @@ High-level stack:
 - **Competition:** quick match, ELO movement, leaderboards, achievements
 - **Release:** App Store-oriented metadata, legal pages, screenshot pack, mobile/iPad layouts
 
-See [`docs/architecture.md`](docs/architecture.md).
+See [`docs/architecture.md`](docs/architecture.md) and [`docs/engineering-decisions.md`](docs/engineering-decisions.md).
 
 
 ## Code examples
@@ -72,6 +74,15 @@ Small TypeScript examples show the product logic behind gameplay, ranking, and a
 - [`examples/game-session-state.ts`](examples/game-session-state.ts)
 - [`examples/ranking.ts`](examples/ranking.ts)
 - [`examples/achievement-engine.ts`](examples/achievement-engine.ts)
+
+## Run the code examples
+
+```bash
+npm ci
+npm run ci
+```
+
+The CI command type-checks the examples and runs unit tests for ranking, achievements, and session state.
 
 ## Screenshots
 
