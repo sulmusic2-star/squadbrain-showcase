@@ -22,8 +22,9 @@ If you are evaluating this quickly, start here:
 1. [Live demo](https://sulmusic2-star.github.io/squadbrain-showcase/)
 2. [Case study](https://sulmusic2-star.github.io/case-studies/squadbrain/)
 3. [Evaluator guide](docs/evaluator-guide.md)
-4. Advanced logic: [`adaptive-practice.ts`](examples/adaptive-practice.ts), [`result-validation.ts`](examples/result-validation.ts), [`matchmaking.ts`](examples/matchmaking.ts)
-5. [CI workflow](https://github.com/sulmusic2-star/squadbrain-showcase/actions/workflows/ci.yml) and [coverage summary](docs/coverage-summary.md)
+4. [Architecture decision records](docs/adr/README.md)
+5. Advanced logic: [`adaptive-practice.ts`](examples/adaptive-practice.ts), [`result-validation.ts`](examples/result-validation.ts), [`matchmaking.ts`](examples/matchmaking.ts)
+6. [CI workflow](https://github.com/sulmusic2-star/squadbrain-showcase/actions/workflows/ci.yml) and [coverage summary](docs/coverage-summary.md)
 
 ## What the product does
 
@@ -77,7 +78,7 @@ High-level stack:
 - **Competition:** quick match, ELO movement, leaderboards, achievements
 - **Release:** App Store-oriented metadata, legal pages, screenshot pack, mobile/iPad layouts
 
-See [`docs/architecture.md`](docs/architecture.md), [`docs/engineering-decisions.md`](docs/engineering-decisions.md), [`docs/testing.md`](docs/testing.md), and [`docs/evaluator-guide.md`](docs/evaluator-guide.md).
+See [`docs/architecture.md`](docs/architecture.md), [`docs/engineering-decisions.md`](docs/engineering-decisions.md), [`docs/adr/README.md`](docs/adr/README.md), [`docs/testing.md`](docs/testing.md), and [`docs/evaluator-guide.md`](docs/evaluator-guide.md).
 
 
 ## Code examples
