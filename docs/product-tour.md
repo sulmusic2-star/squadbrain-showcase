@@ -1,4 +1,4 @@
-# Product Walkthrough
+# Product Tour
 
 SquadBrain is a sports roster memorization game. The app turns team knowledge into a short repeatable game loop: choose a sport, pick a team, identify players by jersey/position/name prompts, and improve through practice or competitive modes.
 

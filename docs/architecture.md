@@ -40,15 +40,13 @@ This separation keeps game interactions fast and avoids making every gameplay ac
 
 The architecture uses Firebase services for identity and cloud persistence, with server-side functions for validation-sensitive operations.
 
-Backend concepts shown here:
+Backend concepts:
 
 - challenge records for competitive play
 - leaderboard records for rank/progression surfaces
 - user profile records for cross-device continuity
 - server-side validation before trusted competitive updates
 - rate-limited writes for abuse resistance
-
-Implementation detail is summarized at the architectural level so the repo stays focused on product and system design.
 
 ## Why this architecture is credible
 

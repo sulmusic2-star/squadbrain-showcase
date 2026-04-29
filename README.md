@@ -2,7 +2,7 @@
 
 > A mobile sports-learning game built around roster memory, quick-match competition, achievement loops, and cross-device progression.
 
-This showcase presents the product concept, app surfaces, architecture, and release packaging for SquadBrain. It is focused on the parts a reviewer can evaluate quickly: gameplay loop, mobile UX, technical architecture, screenshots, and demo flow.
+SquadBrain turns roster knowledge into a repeatable game loop: pick a team, practice recall, play quick rounds, compete on results, and come back through streaks, achievements, rank movement, and friend challenges.
 
 ![SquadBrain demo](assets/squadbrain-demo.gif)
 
@@ -10,30 +10,28 @@ This showcase presents the product concept, app surfaces, architecture, and rele
 
 Live demo: https://sulmusic2-star.github.io/squadbrain-showcase/
 
-## Why this project exists
+## What the product does
 
-Most sports trivia games test facts after the fact. SquadBrain is built around a more specific loop:
+Most sports trivia games test facts after the fact. SquadBrain focuses on learning the roster itself:
 
 1. pick a sport and team
 2. memorize jersey numbers, players, positions, and roster patterns
 3. play quick rounds to reinforce recall
-4. compete through quick match / leaderboard mechanics
+4. compete through quick-match and leaderboard mechanics
 5. return through streaks, achievements, rank progression, and friend challenges
 
-The product goal was to make roster knowledge feel like a repeatable game loop, not a static quiz.
-
-## What this showcase demonstrates
+## What this build shows
 
 - Mobile product design and iteration
 - Expo / React Native app architecture
+- TypeScript-based product surfaces
 - State management across game, user, progress, achievements, monetization, and matchmaking flows
-- Firebase-backed social and leaderboard features
-- Cloud Functions for server-side validation and anti-cheat patterns
+- Firebase-backed social and leaderboard concepts
+- Cloud Functions patterns for validation-sensitive actions
 - ELO-style competitive ranking and quick-match flows
 - Multi-sport roster data modeling
 - Responsive iPhone/iPad layouts
-- App Store packaging, legal screens, and release-readiness thinking
-- Security-aware architecture and server-side validation thinking
+- App Store packaging, legal screens, screenshots, and release-readiness thinking
 
 ## Product surface
 
@@ -51,7 +49,7 @@ The app includes surfaces for:
 - store / monetization experiments
 - legal / privacy screens
 
-See [`docs/product-walkthrough.md`](docs/product-walkthrough.md).
+See [`docs/product-tour.md`](docs/product-tour.md).
 
 ## Technical architecture
 
@@ -61,16 +59,10 @@ High-level stack:
 - **State:** Zustand stores with persisted local state
 - **Backend:** Firebase Auth, Firestore, Cloud Functions
 - **Game logic:** local game loop with server-side result validation patterns
-- **Competition:** quick-match, ELO movement, leaderboards, achievements
+- **Competition:** quick match, ELO movement, leaderboards, achievements
 - **Release:** App Store-oriented metadata, legal pages, screenshot pack, mobile/iPad layouts
 
 See [`docs/architecture.md`](docs/architecture.md).
-
-## Repository scope
-
-This repo focuses on the product, architecture, screenshots, demo flow, and release-readiness artifacts that make the build understandable.
-
-See [`docs/security-and-redaction.md`](docs/security-and-redaction.md).
 
 ## Screenshots
 
@@ -84,14 +76,8 @@ See [`docs/security-and-redaction.md`](docs/security-and-redaction.md).
 
 ## Technical decisions
 
-- How the product loop turns memorization into progression and competition.
-- Why same-team matching matters for fair comparison.
-- How persisted local state and cloud sync were separated to keep gameplay fast.
-- Why result validation should happen server-side for competitive modes.
-- How screenshots, legal docs, app metadata, and release checklists were treated as part of the product, not afterthoughts.
-- How product documentation, screenshots, legal screens, and release checklists fit into release readiness.
-
-## Status
-
-Portfolio showcase for product review and technical evaluation.
-
+- Local state keeps gameplay fast instead of making every tap depend on the network.
+- Cloud-backed profile, leaderboard, and social records support continuity across devices.
+- Server-side validation patterns protect competitive results.
+- Same-team matching keeps comparisons fair.
+- Achievements, streaks, and rank movement make memorization feel like progression instead of homework.
