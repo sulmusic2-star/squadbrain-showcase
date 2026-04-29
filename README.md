@@ -64,7 +64,7 @@ High-level stack:
 - **Competition:** quick match, ELO movement, leaderboards, achievements
 - **Release:** App Store-oriented metadata, legal pages, screenshot pack, mobile/iPad layouts
 
-See [`docs/architecture.md`](docs/architecture.md) and [`docs/engineering-decisions.md`](docs/engineering-decisions.md).
+See [`docs/architecture.md`](docs/architecture.md), [`docs/engineering-decisions.md`](docs/engineering-decisions.md), and [`docs/testing.md`](docs/testing.md).
 
 
 ## Code examples
@@ -74,6 +74,8 @@ Small TypeScript examples show the product logic behind gameplay, ranking, and a
 - [`examples/game-session-state.ts`](examples/game-session-state.ts)
 - [`examples/ranking.ts`](examples/ranking.ts)
 - [`examples/achievement-engine.ts`](examples/achievement-engine.ts)
+- [`examples/roster-normalization.ts`](examples/roster-normalization.ts)
+- [`examples/matchmaking.ts`](examples/matchmaking.ts)
 
 ## Run the code examples
 
@@ -82,7 +84,7 @@ npm ci
 npm run ci
 ```
 
-The CI command type-checks the examples and runs unit tests for ranking, achievements, and session state.
+The CI command type-checks the examples and runs unit tests for ranking, achievements, session state, roster normalization, and matchmaking.
 
 ## Screenshots
 

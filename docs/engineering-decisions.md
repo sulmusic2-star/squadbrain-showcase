@@ -19,3 +19,11 @@ Achievements are easier to maintain when unlock logic lives in one rule table in
 ## Design for release, not just the demo
 
 Screenshots, legal screens, app metadata, iPhone/iPad layouts, and release checklists are part of the product surface. The build is stronger when release packaging is treated as engineering work, not cleanup.
+
+## Normalize roster data before prompts
+
+Roster data has to be cleaned before it becomes gameplay. Normalizing names, positions, jersey values, and search text keeps prompt generation predictable.
+
+## Match on context before rating
+
+A close rating match is not enough if two players are answering different team prompts. Quick-match ranking starts with same-team context, then uses rating gap and wait time.
