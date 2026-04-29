@@ -2,7 +2,7 @@
 
 > A mobile sports-learning game built around roster memory, quick-match competition, achievement loops, and cross-device progression.
 
-This is a **public portfolio showcase** for SquadBrain. It is intentionally not a full production source dump. The live/private implementation, credentials, data pipelines, and operational details are kept private.
+This showcase presents the product concept, app surfaces, architecture, and release packaging for SquadBrain. It is focused on the parts a reviewer can evaluate quickly: gameplay loop, mobile UX, technical architecture, screenshots, and demo flow.
 
 ![SquadBrain demo](assets/squadbrain-demo.gif)
 
@@ -33,11 +33,11 @@ The product goal was to make roster knowledge feel like a repeatable game loop, 
 - Multi-sport roster data modeling
 - Responsive iPhone/iPad layouts
 - App Store packaging, legal screens, and release-readiness thinking
-- Security-aware architecture without exposing production secrets
+- Security-aware architecture and server-side validation thinking
 
 ## Product surface
 
-The private app includes surfaces for:
+The app includes surfaces for:
 
 - onboarding and username setup
 - sport and team selection
@@ -66,18 +66,9 @@ High-level stack:
 
 See [`docs/architecture.md`](docs/architecture.md).
 
-## Security / privacy posture
+## Repository scope
 
-This public repo intentionally excludes:
-
-- `.env` files
-- API keys
-- Firebase project secrets
-- production Cloud Function source details
-- private roster refresh methods
-- anti-abuse thresholds beyond high-level descriptions
-- operational deployment notes
-- app-store credentials
+This repo focuses on the product, architecture, screenshots, demo flow, and release-readiness artifacts that make the build understandable.
 
 See [`docs/security-and-redaction.md`](docs/security-and-redaction.md).
 
@@ -91,16 +82,16 @@ See [`docs/security-and-redaction.md`](docs/security-and-redaction.md).
 |---|---|---|
 | ![](screenshots/04-squad-brain-4.png) | ![](screenshots/05-squad-brain-5.png) | ![](screenshots/06-squad-brain-6.png) |
 
-## What I would talk about in an interview
+## Technical decisions
 
 - How the product loop turns memorization into progression and competition.
 - Why same-team matching matters for fair comparison.
 - How persisted local state and cloud sync were separated to keep gameplay fast.
 - Why result validation should happen server-side for competitive modes.
 - How screenshots, legal docs, app metadata, and release checklists were treated as part of the product, not afterthoughts.
-- How the public showcase was deliberately redacted before publishing.
+- How product documentation, screenshots, legal screens, and release checklists fit into release readiness.
 
 ## Status
 
-Portfolio showcase. Production internals private.
+Portfolio showcase for product review and technical evaluation.
 

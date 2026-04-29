@@ -1,46 +1,26 @@
-# Security And Redaction Notes
+# Repository Review Notes
 
-This repository is designed to show the project without leaking private material.
+This repository is designed around project review: product surface, architecture, screenshots, demo flow, and release packaging.
 
-## Redacted from the public showcase
+## Review focus
 
-- production `.env` files
-- Firebase keys and project IDs
-- API keys for AI providers
-- RevenueCat / monetization keys
-- app-store credentials
-- deployment tokens
-- full Cloud Function source
-- exact anti-abuse thresholds
-- private data refresh scripts
-- raw launch notes containing operational details
-- generated completion/audit notes that overexplain internal process
+- core gameplay loop
+- mobile UX surfaces
+- Expo / React Native / TypeScript architecture
+- Firebase-backed social and leaderboard concepts
+- server-side validation patterns
+- screenshot and demo packaging
+- release-readiness thinking
 
-## Why not publish the raw repo?
+## Technical claims
 
-The raw private project contains real production configuration, deployment history, and operational notes. Publishing it directly would make the project look less professional and could leak credentials or reusable methods.
+Supported by this showcase:
 
-The better public posture is:
-
-1. show the product
-2. show the architecture
-3. show technical judgment
-4. keep the implementation details private
-
-## Public-safe technical claims
-
-Safe to say:
-
-- built with Expo, React Native, TypeScript, Firebase, and Cloud Functions
+- built with Expo, React Native, TypeScript, Firebase, and Cloud Functions architecture
 - includes quick match, ELO-style ranking, leaderboards, achievements, and social flows
 - designed with mobile and iPad layouts
 - uses server-side validation patterns for competitive results
 
-Avoid saying unless separately verified:
+## Claim boundaries
 
-- exact user capacity
-- enterprise-grade security
-- production scale numbers
-- App Store approval status
-- revenue claims
-- exact backend thresholds or implementation details
+Keep claims tied to what is demonstrated here: product structure, architecture, screenshots, and demo flow. Avoid unsupported claims about scale, revenue, app-store status, or exact backend capacity.

@@ -43,4 +43,4 @@ The UI was designed for phone screens first, then adapted for larger iPad layout
 
 ## Public screenshots
 
-Screenshots are included in `/screenshots`. They are safe to show publicly and do not expose credentials, user data, or private operational details.
+Screenshots are included in `/screenshots` and focus on the product surfaces a reviewer can evaluate.

@@ -18,11 +18,10 @@
 - Firebase-backed identity and persistence.
 - Firestore-backed social/leaderboard concepts.
 - Cloud Function layer for validation-sensitive operations.
-- Public showcase intentionally avoids exposing the private implementation.
 
 ## Release/product readiness
 
 - App icon and screenshot work.
 - Legal/privacy screens.
 - Store and monetization experiment surfaces.
-- Product documentation and launch checklists kept private/redacted for public clarity.
+- Product documentation, screenshots, legal screens, and release checklists treated as part of release readiness.

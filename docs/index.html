@@ -32,8 +32,8 @@
     </section>
 
     <section class="section" id="interactive">
-      <h2>Interactive public-safe flow</h2>
-      <p class="muted">This is a static demo using fictional values. It demonstrates the product loop without exposing private app source, production credentials, backend internals, or user data.</p>
+      <h2>Interactive demo flow</h2>
+      <p class="muted">This static demo uses fictional values and demonstrates the core product loop: choose a team, practice recall, play a match, and review progress.</p>
       <div class="demo">
         <div class="card">
           <div class="tabs" role="tablist">
@@ -57,7 +57,7 @@
             <li>Mobile-first product loop: practice → quick match → result → rank movement.</li>
             <li>Competition architecture with same-team fairness as the core product constraint.</li>
             <li>Persistent progress concepts: achievements, streaks, leaderboards, friend challenges.</li>
-            <li>Public-safe documentation and packaging without exposing production implementation.</li>
+            <li>Clear product documentation and release packaging.</li>
           </ul>
         </div>
       </div>
@@ -73,7 +73,7 @@
       </div>
     </section>
   </main>
-  <footer class="wrap">Public showcase only. Production source, credentials, and backend internals are intentionally private.</footer>
+  <footer class="wrap">SquadBrain showcase: product loop, mobile UX, architecture, and release packaging.</footer>
   <script>
     const teams={NFL:['Buffalo','7/10','6/10','Win: +16 ELO','72%'],NBA:['Boston','8/10','8/10','Tie: +1 ELO','64%'],MLB:['New York','6/10','4/10','Win: +21 ELO','80%'],NHL:['Toronto','5/10','7/10','Loss: -12 ELO','48%']};
     document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const v=teams[btn.dataset.sport];team.textContent=v[0];score.textContent=v[1];opp.textContent=v[2];outcome.textContent=v[3];bar.style.width=v[4];}));
