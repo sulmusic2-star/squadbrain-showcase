@@ -7,6 +7,15 @@ SquadBrain's public examples are small, but they are treated like production log
 ```bash
 npm ci
 npm run ci
+npm run coverage
+```
+
+## Coverage
+
+A committed coverage snapshot lives at [`docs/coverage-summary.md`](coverage-summary.md). Re-run it with:
+
+```bash
+npm run coverage
 ```
 
 ## What is covered

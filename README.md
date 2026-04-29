@@ -1,6 +1,9 @@
 # SquadBrain — Sports Roster Memorization Game
 
 [![SquadBrain examples CI](https://github.com/sulmusic2-star/squadbrain-showcase/actions/workflows/ci.yml/badge.svg)](https://github.com/sulmusic2-star/squadbrain-showcase/actions/workflows/ci.yml)
+![Tests](https://img.shields.io/badge/tests-17%20passing-brightgreen)
+![Coverage](https://img.shields.io/badge/line%20coverage-100%25-brightgreen)
+![Branch coverage](https://img.shields.io/badge/branch%20coverage-89.79%25-yellowgreen)
 
 > A mobile sports-learning game built around roster memory, quick-match competition, achievement loops, and cross-device progression.
 
@@ -76,6 +79,7 @@ Small TypeScript examples show the product logic behind gameplay, ranking, and a
 - [`examples/achievement-engine.ts`](examples/achievement-engine.ts)
 - [`examples/roster-normalization.ts`](examples/roster-normalization.ts)
 - [`examples/matchmaking.ts`](examples/matchmaking.ts)
+- [`docs/coverage-summary.md`](docs/coverage-summary.md)
 
 ## Run the code examples
 
@@ -84,7 +88,7 @@ npm ci
 npm run ci
 ```
 
-The CI command type-checks the examples and runs unit tests for ranking, achievements, session state, roster normalization, and matchmaking.
+The CI command type-checks the examples, runs unit tests for ranking, achievements, session state, roster normalization, and matchmaking, and produces a coverage report.
 
 ## Screenshots
 

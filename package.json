@@ -6,10 +6,12 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "test": "tsx --test examples/*.test.ts",
-    "ci": "npm run typecheck && npm test"
+    "ci": "npm run typecheck && npm test && npm run coverage",
+    "coverage": "c8 --include \"examples/*.ts\" --exclude \"examples/*.test.ts\" --reporter=text --reporter=json-summary --report-dir coverage npm test"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",
+    "c8": "^11.0.0",
     "tsx": "^4.20.0",
     "typescript": "^5.8.0"
   }
