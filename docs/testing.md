@@ -27,6 +27,8 @@ npm run coverage
 - roster normalization
 - prompt candidate search
 - same-team quick-match candidate ranking
+- adaptive practice priority scoring
+- server-style result validation and review flags
 
 ## Why this matters
 

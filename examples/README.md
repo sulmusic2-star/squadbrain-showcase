@@ -9,6 +9,8 @@ Small TypeScript examples that show the product logic behind the app.
 - [`achievement-engine.ts`](achievement-engine.ts) — achievement unlock rules
 - [`roster-normalization.ts`](roster-normalization.ts) — roster cleanup and prompt candidate helpers
 - [`matchmaking.ts`](matchmaking.ts) — same-team quick-match candidate ranking
+- [`adaptive-practice.ts`](adaptive-practice.ts) — spaced-practice queue scoring with review reasons
+- [`result-validation.ts`](result-validation.ts) — server-style result validation and risk flags
 
 ## What they show
 
@@ -17,4 +19,6 @@ Small TypeScript examples that show the product logic behind the app.
 - treating achievements as explicit rules instead of scattered UI flags
 - normalizing roster data before it reaches prompts
 - ranking match candidates by same-team fit, rating gap, and wait time
+- prioritizing practice prompts by due state, misses, recent exposure, and prompt mix
+- recomputing competitive submissions before ranking updates
 - designing game systems that can evolve without rewriting every screen
