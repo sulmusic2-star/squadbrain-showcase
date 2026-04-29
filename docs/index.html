@@ -4,79 +4,67 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SquadBrain Showcase</title>
-  <meta name="description" content="Public demo showcase for SquadBrain, a sports roster memorization game built with React Native, Expo, TypeScript, and Firebase-backed product architecture." />
+  <meta name="description" content="Public demo showcase for SquadBrain, a sports roster memorization game with adaptive practice, result validation, ranking, and mobile product polish." />
   <style>
-    :root{--bg:#08111f;--panel:#101c2e;--panel2:#15233a;--text:#f8fafc;--muted:#9fb0c6;--gold:#fbbf24;--green:#22c55e;--blue:#60a5fa;--red:#fb7185;--border:rgba(255,255,255,.12)}
-    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at top left,#14213b,#08111f 52%,#050914);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5} a{color:var(--gold)}
-    .wrap{max-width:1180px;margin:0 auto;padding:28px}.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center;min-height:88vh}.eyebrow{color:var(--gold);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12px}h1{font-size:clamp(42px,7vw,82px);line-height:.92;margin:10px 0 18px;letter-spacing:-.06em} .lead{font-size:20px;color:#d9e4f3;max-width:720px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:999px;padding:12px 18px;text-decoration:none;color:var(--text);background:rgba(255,255,255,.07);font-weight:750}.btn.primary{background:linear-gradient(135deg,#f59e0b,#facc15);color:#101010;border:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0}.card{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04));border:1px solid var(--border);border-radius:22px;padding:18px;box-shadow:0 18px 60px rgba(0,0,0,.25)}.card strong{font-size:30px;display:block}.card span,.muted{color:var(--muted)}.phone{background:#050914;border:1px solid var(--border);border-radius:34px;padding:18px;box-shadow:0 35px 100px rgba(0,0,0,.45);position:relative}.phone img{width:100%;border-radius:22px;display:block}.section{padding:72px 0}.section h2{font-size:clamp(30px,4vw,48px);margin:0 0 16px;letter-spacing:-.04em}.demo{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;align-items:start}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.tab{border:1px solid var(--border);background:rgba(255,255,255,.05);color:var(--text);border-radius:999px;padding:9px 12px;cursor:pointer;font-weight:700}.tab.active{background:var(--gold);color:#111;border-color:transparent}.scoreboard{display:grid;grid-template-columns:1fr 1fr;gap:14px}.result{font-size:42px;font-weight:900;color:var(--green)}.rankbar{height:12px;border-radius:999px;background:rgba(255,255,255,.09);overflow:hidden}.rankbar div{height:100%;background:linear-gradient(90deg,var(--gold),var(--green));width:62%}.shots{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.shots img{width:100%;border-radius:16px;border:1px solid var(--border)}footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted)}@media(max-width:850px){.hero,.demo{grid-template-columns:1fr}.shots{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.scoreboard{grid-template-columns:1fr}}
+    :root{--bg:#0b1323;--ink:#f8fafc;--muted:#a8b4c7;--panel:#111d32;--panel2:#17263f;--line:rgba(255,255,255,.13);--gold:#f0b33f;--orange:#ff8a3d;--blue:#6ea8ff;--green:#4ade80;--paper:#fff8eb}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 10% 0,rgba(240,179,63,.18),transparent 30%),radial-gradient(circle at 90% 18%,rgba(110,168,255,.16),transparent 28%),linear-gradient(180deg,#0d1729,#071020 60%,#050914);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px);background-size:66px 66px;mask-image:linear-gradient(#000,transparent 70%)}a{color:var(--gold);font-weight:800;text-underline-offset:3px}.wrap{width:min(1220px,calc(100% - 44px));margin:auto;padding:24px 0;position:relative}.topnav{position:sticky;top:0;z-index:10;display:flex;gap:10px;flex-wrap:wrap;padding:10px 0 28px;background:linear-gradient(180deg,rgba(11,19,35,.94),rgba(11,19,35,.72));backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.topnav a{text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:8px 13px;background:rgba(255,255,255,.06);font-size:14px}.hero{display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center;min-height:82vh;padding:58px 0}.eyebrow{color:var(--gold);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:950;margin:0 0 12px}h1{font-size:clamp(54px,8vw,104px);line-height:.88;letter-spacing:-.08em;margin:0 0 22px;text-wrap:balance}.lead{font-size:clamp(18px,2vw,23px);color:#d7e1ee;max-width:760px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:12px 18px;border:1px solid var(--line);background:rgba(255,255,255,.07);color:var(--ink);text-decoration:none;font-weight:900;cursor:pointer}.btn.primary{background:linear-gradient(135deg,var(--gold),var(--orange));color:#111827;border:0;box-shadow:0 18px 44px rgba(240,179,63,.18)}.metric-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.metric{border:1px solid var(--line);border-radius:20px;padding:16px;background:rgba(255,255,255,.055)}.metric b{display:block;font-size:28px;letter-spacing:-.04em}.metric span,.muted{color:var(--muted)}.device-stage{position:relative;min-height:560px;border:1px solid var(--line);border-radius:34px;background:radial-gradient(circle at 50% 20%,rgba(240,179,63,.16),transparent 30%),linear-gradient(145deg,rgba(255,255,255,.10),rgba(255,255,255,.04));box-shadow:0 38px 110px rgba(0,0,0,.38);overflow:hidden;padding:30px}.device-stage:before{content:"";position:absolute;inset:24px;border:1px solid rgba(255,255,255,.08);border-radius:24px;background:linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:42px 42px}.phone{position:relative;z-index:2;width:min(300px,58%);margin:42px auto 0;border-radius:34px;background:#050914;padding:14px;border:1px solid rgba(255,255,255,.18);box-shadow:0 28px 90px rgba(0,0,0,.45)}.phone img{width:100%;display:block;border-radius:24px}.floating-card{position:absolute;z-index:3;border:1px solid var(--line);border-radius:18px;padding:14px 16px;background:rgba(17,29,50,.82);backdrop-filter:blur(12px);box-shadow:0 18px 50px rgba(0,0,0,.25)}.floating-card.one{left:28px;top:70px}.floating-card.two{right:26px;top:160px}.floating-card.three{left:42px;bottom:70px}.floating-card b{display:block}.floating-card span{color:var(--muted);font-size:13px}.section{padding:58px 0}.section-head{max-width:860px;margin-bottom:22px}h2{font-size:clamp(34px,5vw,58px);line-height:.96;letter-spacing:-.06em;margin:0 0 18px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{border:1px solid var(--line);border-radius:26px;padding:24px;background:linear-gradient(180deg,rgba(255,255,255,.085),rgba(255,255,255,.045));box-shadow:0 20px 70px rgba(0,0,0,.22)}.card h3{font-size:24px;letter-spacing:-.04em;margin:0 0 10px}.demo{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.tab{border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--ink);border-radius:999px;padding:9px 13px;cursor:pointer;font-weight:900}.tab.active{background:var(--gold);color:#111827;border-color:transparent}.scoreboard{display:grid;grid-template-columns:1fr 1fr;gap:12px}.result{font-size:48px;font-weight:950;color:var(--green);letter-spacing:-.05em}.rankbar{height:13px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden}.rankbar div{height:100%;background:linear-gradient(90deg,var(--gold),var(--green));width:72%}.system-strip{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:26px;overflow:hidden;background:rgba(255,255,255,.055);box-shadow:0 20px 70px rgba(0,0,0,.22)}.system-strip div{padding:22px;border-right:1px solid var(--line)}.system-strip div:last-child{border-right:0}.system-strip span{display:inline-flex;margin-bottom:12px;color:var(--gold);font-size:12px;text-transform:uppercase;letter-spacing:.14em;font-weight:950}.system-strip b{display:block;font-size:18px}.shots{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.shots img{width:100%;border-radius:20px;border:1px solid var(--line);background:#0e1728;box-shadow:0 18px 54px rgba(0,0,0,.28)}footer{border-top:1px solid var(--line);padding:34px 0 48px;color:var(--muted)}@media(max-width:900px){.hero,.demo{grid-template-columns:1fr}.grid,.metric-row,.system-strip{grid-template-columns:1fr 1fr}.shots{grid-template-columns:repeat(2,1fr)}.device-stage{min-height:auto}.floating-card{position:relative;inset:auto!important;margin:10px}.phone{width:min(320px,100%)}}@media(max-width:620px){.grid,.metric-row,.system-strip,.shots{grid-template-columns:1fr}h1{font-size:54px}.wrap{width:min(100% - 28px,1220px)}}
   </style>
 </head>
 <body>
   <main class="wrap">
+    <nav class="topnav"><a href="https://sulmusic2-star.github.io/">Portfolio</a><a href="https://sulmusic2-star.github.io/proof/">Selected work</a><a href="https://sulmusic2-star.github.io/case-studies/squadbrain/">Case study</a><a href="https://github.com/sulmusic2-star/squadbrain-showcase">GitHub</a></nav>
     <section class="hero">
       <div>
-        <div class="eyebrow">Public product demo</div>
-        <h1>SquadBrain</h1>
-        <p class="lead">A mobile sports roster memorization game built around short practice loops, quick-match competition, achievements, leaderboards, and mobile-first product polish.</p>
-        <div class="actions">
-          <a class="btn primary" href="https://github.com/sulmusic2-star/squadbrain-showcase">Open GitHub repo</a>
-          <a class="btn" href="#interactive">Try the product flow</a>
-        </div>
-        <div class="grid">
-          <div class="card"><strong>7</strong><span>sports modeled</span></div>
-          <div class="card"><strong>ELO</strong><span>ranking concept</span></div>
-          <div class="card"><strong>iOS+iPad</strong><span>responsive surfaces</span></div>
-        </div>
+        <p class="eyebrow">Mobile product system</p>
+        <h1>Roster recall built like a game.</h1>
+        <p class="lead">SquadBrain turns sports roster memorization into a fast mobile loop: practice cards, quick-match competition, ranking movement, achievements, and validation-sensitive result logic.</p>
+        <div class="actions"><a class="btn primary" href="#interactive">Try the product flow</a><a class="btn" href="https://github.com/sulmusic2-star/squadbrain-showcase">Open GitHub repo</a></div>
+        <div class="metric-row"><div class="metric"><b>25</b><span>passing TypeScript tests</span></div><div class="metric"><b>98.3%</b><span>line coverage summary</span></div><div class="metric"><b>7</b><span>sports modeled in product docs</span></div></div>
       </div>
-      <div class="phone"><img src="assets/squadbrain-demo.gif" alt="Animated SquadBrain app showcase" /></div>
+      <aside class="device-stage" aria-label="SquadBrain product preview">
+        <div class="floating-card one"><b>Practice priority</b><span>due state · misses · stability</span></div>
+        <div class="floating-card two"><b>Fair match logic</b><span>same-team context · rating gap</span></div>
+        <div class="floating-card three"><b>Result guardrails</b><span>recompute score · flag risk</span></div>
+        <div class="phone"><img src="assets/squadbrain-demo.gif" alt="Animated SquadBrain app showcase" /></div>
+      </aside>
+    </section>
+
+    <section class="section system-strip" aria-label="System highlights">
+      <div><span>Surface</span><b>Mobile-first practice loop</b></div>
+      <div><span>Logic</span><b>Adaptive card priority</b></div>
+      <div><span>Competition</span><b>Matchmaking and ranking</b></div>
+      <div><span>Proof</span><b>Tests, CI, coverage, docs</b></div>
     </section>
 
     <section class="section" id="interactive">
-      <h2>Interactive demo flow</h2>
-      <p class="muted">This static demo uses sample values and demonstrates the core product loop: choose a team, practice recall, play a match, and review progress.</p>
+      <div class="section-head"><p class="eyebrow">Interactive demo flow</p><h2>Choose a league, play the loop, see the result state.</h2><p class="muted">This static demo uses sample values and demonstrates the core product path: team context, roster recall, same-team opponent, score validation, and rank movement.</p></div>
       <div class="demo">
         <div class="card">
           <div class="tabs" role="tablist">
-            <button class="tab active" data-sport="NFL">NFL</button>
-            <button class="tab" data-sport="NBA">NBA</button>
-            <button class="tab" data-sport="MLB">MLB</button>
-            <button class="tab" data-sport="NHL">NHL</button>
+            <button class="tab active" data-sport="NFL">NFL</button><button class="tab" data-sport="NBA">NBA</button><button class="tab" data-sport="MLB">MLB</button><button class="tab" data-sport="NHL">NHL</button>
           </div>
           <h3 id="team">Buffalo</h3>
-          <p class="muted">Choose a team context, play a short roster round, compare against a same-team opponent, and move your rank based on score, accuracy, and time.</p>
-          <div class="scoreboard">
-            <div class="card"><span>Your score</span><div class="result" id="score">7/10</div></div>
-            <div class="card"><span>Opponent</span><div class="result" id="opp">6/10</div></div>
-          </div>
-          <p><strong id="outcome">Win: +16 ELO</strong></p>
-          <div class="rankbar"><div id="bar"></div></div>
+          <p class="muted" id="prompt">Same-team quick match. Result is recomputed before rank movement.</p>
+          <div class="scoreboard"><div class="card"><span>Your score</span><div class="result" id="score">7/10</div></div><div class="card"><span>Opponent</span><div class="result" id="opp">6/10</div></div></div>
+          <p><strong id="outcome">Win: +16 ELO</strong></p><div class="rankbar"><div id="bar"></div></div>
         </div>
-        <div class="card">
-          <h3>What the build demonstrates</h3>
-          <ul>
-            <li>Mobile-first product loop: practice → quick match → result → rank movement.</li>
-            <li>Competition architecture with same-team fairness as the core product constraint.</li>
-            <li>Persistent progress concepts: achievements, streaks, leaderboards, friend challenges.</li>
-            <li>Clear product documentation and release packaging.</li>
-          </ul>
-        </div>
+        <div class="card"><h3>What this demonstrates</h3><ul><li>Product loop: practice → quick match → result → rank movement.</li><li>Competition boundary: same-team fairness and server-style result validation.</li><li>Progression design: achievements, streaks, rankings, and return motivation.</li><li>Inspectable implementation: examples, tests, CI, and evaluator docs.</li></ul></div>
       </div>
     </section>
 
     <section class="section">
-      <h2>Product screenshots</h2>
-      <div class="shots">
-        <img src="screenshots/01-squad-brain-1.png" alt="SquadBrain home" />
-        <img src="screenshots/02-real-squad-brain-2.png" alt="SquadBrain competition" />
-        <img src="screenshots/03-squad-brain-3.png" alt="SquadBrain results" />
-        <img src="screenshots/05-squad-brain-5.png" alt="SquadBrain achievements" />
-      </div>
+      <div class="section-head"><p class="eyebrow">Engineering proof</p><h2>Public code paths behind the product surface.</h2></div>
+      <div class="grid"><div class="card"><h3>Adaptive practice</h3><p class="muted">Prioritizes cards with due state, misses, stability, recent exposure, and prompt mix.</p><p><a href="https://github.com/sulmusic2-star/squadbrain-showcase/blob/main/examples/adaptive-practice.ts">Open example</a></p></div><div class="card"><h3>Result validation</h3><p class="muted">Recomputes competitive submissions and risk-flags impossible or suspicious results.</p><p><a href="https://github.com/sulmusic2-star/squadbrain-showcase/blob/main/examples/result-validation.ts">Open example</a></p></div><div class="card"><h3>Matchmaking</h3><p class="muted">Ranks same-team candidates by rating gap, wait time, and opponent fit.</p><p><a href="https://github.com/sulmusic2-star/squadbrain-showcase/blob/main/examples/matchmaking.ts">Open example</a></p></div></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><p class="eyebrow">Product screenshots</p><h2>Mobile surfaces designed around fast recall.</h2></div>
+      <div class="shots"><img src="screenshots/01-squad-brain-1.png" alt="SquadBrain home" /><img src="screenshots/02-real-squad-brain-2.png" alt="SquadBrain competition" /><img src="screenshots/03-squad-brain-3.png" alt="SquadBrain results" /><img src="screenshots/05-squad-brain-5.png" alt="SquadBrain achievements" /></div>
     </section>
   </main>
-  <footer class="wrap">SquadBrain showcase: product loop, mobile UX, architecture, and release packaging.</footer>
+  <footer class="wrap">SquadBrain showcase · mobile UX · adaptive practice · result validation · ranking logic</footer>
   <script>
-    const teams={NFL:['Buffalo','7/10','6/10','Win: +16 ELO','72%'],NBA:['Boston','8/10','8/10','Tie: +1 ELO','64%'],MLB:['New York','6/10','4/10','Win: +21 ELO','80%'],NHL:['Toronto','5/10','7/10','Loss: -12 ELO','48%']};
-    document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const v=teams[btn.dataset.sport];team.textContent=v[0];score.textContent=v[1];opp.textContent=v[2];outcome.textContent=v[3];bar.style.width=v[4];}));
+    const teams={NFL:['Buffalo','7/10','6/10','Win: +16 ELO','72%','Same-team quick match. Result is recomputed before rank movement.'],NBA:['Boston','8/10','8/10','Tie: +1 ELO','64%','Close match. Accuracy holds, but speed decides whether rank moves.'],MLB:['New York','6/10','4/10','Win: +21 ELO','80%','Opponent fit is weaker, so the result carries a larger movement.'],NHL:['Toronto','5/10','7/10','Loss: -12 ELO','48%','Missed recall lowers the stability score for future practice.']};
+    document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const v=teams[btn.dataset.sport];team.textContent=v[0];score.textContent=v[1];opp.textContent=v[2];outcome.textContent=v[3];bar.style.width=v[4];prompt.textContent=v[5];}));
   </script>
 </body>
 </html>
