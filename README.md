@@ -64,6 +64,15 @@ High-level stack:
 
 See [`docs/architecture.md`](docs/architecture.md).
 
+
+## Code examples
+
+Small TypeScript examples show the product logic behind gameplay, ranking, and achievements:
+
+- [`examples/game-session-state.ts`](examples/game-session-state.ts)
+- [`examples/ranking.ts`](examples/ranking.ts)
+- [`examples/achievement-engine.ts`](examples/achievement-engine.ts)
+
 ## Screenshots
 
 | Home / quick match | Competition | Result / ELO |
