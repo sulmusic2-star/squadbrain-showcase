@@ -1,16 +1,12 @@
-<!-- Repo README — github.com/sulmusic2-star/squadbrain-showcase
-     Drop-in replacement for the existing README.md
-     Upgraded 2026.05 -->
-
 <div align="center">
 
 # SquadBrain
 
 ### Sports roster memorization game — mobile, competitive, cross-device
 
-A React Native + Expo + TypeScript + Firebase app built around roster memory, quick-match competition, achievement loops, and ELO-style ranking.
+A React Native + Expo + TypeScript + Firebase app built around roster memory, quick-match competition, achievement loops, and ELO-style ranking. **Live on the iOS App Store.**
 
-[**Live demo**](https://sulmusic2-star.github.io/squadbrain-showcase/) &nbsp;·&nbsp; [**Evaluator guide**](docs/evaluator-guide.md) &nbsp;·&nbsp; [**Architecture decisions**](docs/adr/README.md)
+[**📱 Download on the App Store**](https://apps.apple.com/us/app/squadbrain/id6756122317) &nbsp;·&nbsp; [**Live demo**](https://sulmusic2-star.github.io/squadbrain-showcase/) &nbsp;·&nbsp; [**Evaluator guide**](docs/evaluator-guide.md) &nbsp;·&nbsp; [**Architecture decisions**](docs/adr/README.md)
 
 [![CI](https://img.shields.io/badge/CI-passing-2c5b3a?style=flat-square)](https://github.com/sulmusic2-star/squadbrain-showcase/actions)
 [![Tests](https://img.shields.io/badge/tests-25_passing-2c5b3a?style=flat-square)](https://github.com/sulmusic2-star/squadbrain-showcase/actions)
@@ -42,7 +38,7 @@ Most sports trivia games test facts after the fact. **SquadBrain focuses on lear
 - **ELO-style competitive ranking** + same-team matchmaking + adaptive practice queues
 - **Multi-sport roster data modeling**
 - **Responsive iPhone + iPad layouts**
-- **App Store packaging** — metadata, legal pages, screenshot pack, release-readiness thinking
+- **Shipped to the iOS App Store** — metadata, legal pages, screenshot pack, and the full submission/review pipeline ([live listing](https://apps.apple.com/us/app/squadbrain/id6756122317))
 
 ---
 
