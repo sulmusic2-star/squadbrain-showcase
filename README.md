@@ -17,6 +17,8 @@ A React Native + Expo + TypeScript + Firebase app built around roster memory, qu
 
 ---
 
+![SquadBrain on iOS: selecting a team, memorizing a roster, and playing a quick recall round](assets/squadbrain-demo.gif)
+
 ## What it does
 
 Most sports trivia games test facts after the fact. **SquadBrain focuses on learning the roster itself** — jersey numbers, players, positions, roster patterns — and turns that knowledge into a repeatable game loop:
