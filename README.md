@@ -1,94 +1,40 @@
-<div align="center">
-
 # SquadBrain
 
-### Sports roster memorization game — mobile, competitive, cross-device
+A sports roster learning app for iPhone and iPad.
 
-A React Native + Expo + TypeScript + Firebase app built around roster memory, quick-match competition, achievement loops, and ELO-style ranking. **Live on the iOS App Store.**
+[App Store](https://apps.apple.com/us/app/squadbrain/id6756122317) · [Case study](docs/case-study.md) · [Technical decisions](docs/engineering-decisions.md)
 
-[**📱 Download on the App Store**](https://apps.apple.com/us/app/squadbrain/id6756122317) &nbsp;·&nbsp; [**Live demo**](https://sulmusic2-star.github.io/squadbrain-showcase/) &nbsp;·&nbsp; [**Evaluator guide**](docs/evaluator-guide.md) &nbsp;·&nbsp; [**Architecture decisions**](docs/adr/README.md)
+<a href="https://apps.apple.com/us/app/squadbrain/id6756122317"><img src="screenshots/01-squad-brain-1.png" alt="SquadBrain app home screen in its published product presentation" width="32%"></a>
+<a href="https://apps.apple.com/us/app/squadbrain/id6756122317"><img src="screenshots/02-real-squad-brain-2.png" alt="SquadBrain roster quiz in its published product presentation" width="32%"></a>
+<a href="https://apps.apple.com/us/app/squadbrain/id6756122317"><img src="screenshots/05-squad-brain-5.png" alt="SquadBrain achievements screen in its published product presentation" width="32%"></a>
 
-[![CI](https://img.shields.io/badge/CI-passing-2c5b3a?style=flat-square)](https://github.com/sulmusic2-star/squadbrain-showcase/actions)
-[![Tests](https://img.shields.io/badge/tests-25_passing-2c5b3a?style=flat-square)](https://github.com/sulmusic2-star/squadbrain-showcase/actions)
-[![Line coverage](https://img.shields.io/badge/line_coverage-98.3%25-2c5b3a?style=flat-square)](docs/coverage-summary.md)
-[![Branch coverage](https://img.shields.io/badge/branch_coverage-81.4%25-2c5b3a?style=flat-square)](docs/coverage-summary.md)
+## Public examples
 
-</div>
+The App Store lists SquadBrain under Timothy Sullivan. The full app source is private. This repository contains selected TypeScript examples of its product logic, with tests and architecture notes.
 
----
-
-![SquadBrain on iOS: selecting a team, memorizing a roster, and playing a quick recall round](assets/squadbrain-demo.gif)
-
-## What it does
-
-Most sports trivia games test facts after the fact. **SquadBrain focuses on learning the roster itself** — jersey numbers, players, positions, roster patterns — and turns that knowledge into a repeatable game loop:
-
-- Pick a sport and team
-- Memorize the roster
-- Play quick rounds to reinforce recall
-- Compete through quick-match and leaderboards
-- Return through streaks, achievements, rank progression, and friend challenges
-
----
-
-## What this build shows
-
-- **Mobile product design and iteration** — onboarding, sport/team selection, practice mode, quick match, results + ELO movement, leaderboard, achievements, friend flows, store, legal/privacy screens
-- **Expo + React Native + TypeScript** app architecture
-- **Zustand** stores with persisted local state — gameplay stays fast instead of waiting on the network
-- **Firebase Auth + Firestore + Cloud Functions** for profiles, leaderboards, and validation-sensitive actions
-- **ELO-style competitive ranking** + same-team matchmaking + adaptive practice queues
-- **Multi-sport roster data modeling**
-- **Responsive iPhone + iPad layouts**
-- **Shipped to the iOS App Store** — metadata, legal pages, screenshot pack, and the full submission/review pipeline ([live listing](https://apps.apple.com/us/app/squadbrain/id6756122317))
-
----
+| Area | Example |
+| --- | --- |
+| Session state | [Game-session state](examples/game-session-state.ts) |
+| Competitive ranking | [Ranking](examples/ranking.ts) |
+| Practice selection | [Adaptive practice](examples/adaptive-practice.ts) |
+| Opponent matching | [Matchmaking](examples/matchmaking.ts) |
+| Submitted-result checks | [Result validation](examples/result-validation.ts) |
+| Roster data | [Roster normalization](examples/roster-normalization.ts) |
+| Progression | [Achievement engine](examples/achievement-engine.ts) |
 
 ## Technical decisions
 
-- Local state keeps gameplay fast instead of making every tap depend on the network
-- Cloud-backed profile, leaderboard, and social records support continuity across devices
-- Server-side validation patterns protect competitive results
-- Same-team matching keeps comparisons fair
-- Achievements, streaks, and rank movement make memorization feel like progression instead of homework
+The examples separate application rules from screen code. The result validator recomputes correctness from player identifiers and flags inconsistent counts, duplicate prompts and suspicious timing. The practice and matching modules make their selection rules available to inspect.
 
-See [`docs/architecture.md`](docs/architecture.md), [`docs/engineering-decisions.md`](docs/engineering-decisions.md), [`docs/adr/README.md`](docs/adr/README.md), [`docs/testing.md`](docs/testing.md), and [`docs/evaluator-guide.md`](docs/evaluator-guide.md).
+Read the [architecture notes](docs/architecture.md) and [decision records](docs/adr/README.md) for the reasoning. The application stack described there is React Native, Expo, TypeScript and Firebase; the examples here can be run separately.
 
----
-
-## Code examples
-
-Small TypeScript examples show the product logic behind gameplay, ranking, and achievements:
-
-- [`examples/game-session-state.ts`](examples/game-session-state.ts)
-- [`examples/ranking.ts`](examples/ranking.ts)
-- [`examples/achievement-engine.ts`](examples/achievement-engine.ts)
-- [`examples/roster-normalization.ts`](examples/roster-normalization.ts)
-- [`examples/matchmaking.ts`](examples/matchmaking.ts)
-- [`examples/adaptive-practice.ts`](examples/adaptive-practice.ts)
-- [`examples/result-validation.ts`](examples/result-validation.ts)
-- [`docs/coverage-summary.md`](docs/coverage-summary.md)
-
-### Run the examples
+## Run locally
 
 ```bash
 npm ci
 npm run ci
 ```
 
-The CI command type-checks the examples, runs unit tests for ranking, achievements, session state, roster normalization, matchmaking, adaptive practice queues, and result validation, and produces a coverage report.
+The command type-checks the examples, runs their tests and generates coverage. Those checks cover the public examples and do not establish the quality of the entire app or its live services.
 
----
-
-## Reviewer path
-
-1. [Live demo](https://sulmusic2-star.github.io/squadbrain-showcase/)
-2. [Case study](docs/case-study.md)
-3. [Evaluator guide](docs/evaluator-guide.md)
-4. [Architecture decision records](docs/adr/README.md)
-5. Advanced logic: [`adaptive-practice.ts`](examples/adaptive-practice.ts) · [`result-validation.ts`](examples/result-validation.ts) · [`matchmaking.ts`](examples/matchmaking.ts)
-6. [CI workflow](.github/workflows) · [Coverage summary](docs/coverage-summary.md)
-
----
-
-[**Portfolio**](https://sulmusic2-star.github.io/) &nbsp;·&nbsp; [hello@lastingground.com](mailto:hello@lastingground.com)
+[Tim Sullivan](https://sulmusic2-star.github.io/) · [Contact](mailto:hello@lastingground.com)
