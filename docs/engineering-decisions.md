@@ -6,7 +6,7 @@ Roster-memory rounds should feel instant. The session reducer keeps prompt answe
 
 ## Trust competitive results differently than practice results
 
-Practice can be fast and forgiving. Competitive flows need server-side validation patterns so ranking, leaderboards, and match outcomes are not just client claims.
+Practice can be fast and forgiving. Competitive flows need a trusted answer key and an authenticated session. The public validator checks consistency within the supplied data; its caller supplies both the selected and expected player identifiers. It demonstrates some result checks, but does not establish the server trust boundary of the private application.
 
 ## Keep ranking logic isolated
 
