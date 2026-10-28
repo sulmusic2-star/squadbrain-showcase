@@ -2,11 +2,9 @@
 
 A sports roster learning app for iPhone and iPad.
 
-[App Store](https://apps.apple.com/us/app/squadbrain/id6756122317) · [Case study](docs/case-study.md) · [Technical decisions](docs/engineering-decisions.md)
+[App Store](https://apps.apple.com/us/app/squadbrain/id6756122317) · [Interactive case study](https://sulmusic2-star.github.io/case-studies/squadbrain/) · [Technical decisions](docs/engineering-decisions.md)
 
-<a href="https://apps.apple.com/us/app/squadbrain/id6756122317"><img src="screenshots/01-squad-brain-1.png" alt="SquadBrain app home screen in its published product presentation" width="32%"></a>
-<a href="https://apps.apple.com/us/app/squadbrain/id6756122317"><img src="screenshots/02-real-squad-brain-2.png" alt="SquadBrain roster quiz in its published product presentation" width="32%"></a>
-<a href="https://apps.apple.com/us/app/squadbrain/id6756122317"><img src="screenshots/05-squad-brain-5.png" alt="SquadBrain achievements screen in its published product presentation" width="32%"></a>
+[![SquadBrain, using cropped published product images](https://raw.githubusercontent.com/sulmusic2-star/sulmusic2-star.github.io/main/assets/squadbrain-cover.webp)](https://sulmusic2-star.github.io/case-studies/squadbrain/)
 
 ## Public examples
 
