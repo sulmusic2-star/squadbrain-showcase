@@ -24,7 +24,7 @@ The App Store lists SquadBrain under Timothy Sullivan. The full app source is pr
 
 ## Technical decisions
 
-The examples separate application rules from screen code. The result validator recomputes correctness from player identifiers and flags inconsistent counts, duplicate prompts and suspicious timing. The practice and matching modules make their selection rules available to inspect.
+The examples separate application rules from screen code. The result validator compares supplied player identifiers and flags inconsistent counts, duplicate prompts and suspicious timing. Its caller must supply trusted expected answers: the example does not authenticate a submission or load an authoritative answer key. The practice and matching modules make their selection rules available to inspect.
 
 Read the [architecture notes](docs/architecture.md) and [decision records](docs/adr/README.md) for the reasoning. The application stack described there is React Native, Expo, TypeScript and Firebase; the examples here can be run separately.
 
