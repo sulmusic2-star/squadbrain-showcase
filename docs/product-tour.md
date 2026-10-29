@@ -1,4 +1,4 @@
-# Product Tour
+# Product tour
 
 SquadBrain is a sports roster memorization game. The app turns team knowledge into a short repeatable game loop: choose a sport, pick a team, identify players by jersey/position/name prompts, and improve through practice or competitive modes.
 
@@ -19,23 +19,23 @@ SquadBrain is a sports roster memorization game. The app turns team knowledge in
 - Compare score, accuracy, and time.
 - Move up/down through ELO-style ranking.
 
-### Retention loop
+### Progress and challenges
 
-- Daily/recurring progress surfaces.
+- Daily and recurring progress displays.
 - Achievements and badges.
-- Friend challenges and social proof.
+- Friend challenges.
 - Leaderboard/rank movement.
-- Multi-sport expansion for breadth.
+- Support for multiple sports.
 
 ## Product decisions
 
 ### Same-team competition
 
-A key fairness decision was matching users on the same team context where possible. Comparing a Buffalo roster run against a Buffalo roster run creates a clearer competitive signal than cross-team trivia.
+Matching players on the same team means both answer questions about the same roster. A Buffalo roster round is compared with another Buffalo roster round.
 
 ### Short sessions
 
-Rounds are designed to be short enough for repeated play. The product is strongest when it becomes a quick memory habit, not a long quiz.
+Short rounds let players practice repeatedly.
 
 ### Mobile-first, iPad-aware
 
@@ -43,4 +43,4 @@ The UI was designed for phone screens first, then adapted for larger iPad layout
 
 ## Public screenshots
 
-Screenshots are included in `/screenshots` and focus on the product surfaces a reviewer can evaluate.
+Screenshots are included in `/screenshots` and show the app screens.

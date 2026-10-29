@@ -1,6 +1,6 @@
 # Testing
 
-SquadBrain's public examples are small, but they are treated like production logic: typed, tested, and runnable in CI.
+SquadBrain’s public examples have type checks and tests that run in CI.
 
 ## Run locally
 
@@ -30,6 +30,6 @@ npm run coverage
 - adaptive practice priority scoring
 - server-style result validation and review flags
 
-## Why this matters
+## Limits
 
-A mobile product can look polished while hiding brittle logic. These tests show the core gameplay decisions are expressed as small functions with predictable behavior.
+The tests cover the selected public modules. They do not establish the behavior or security of the full app and its live services.

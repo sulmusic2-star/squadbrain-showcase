@@ -1,6 +1,6 @@
 # Coverage Summary
 
-Generated from `npm run coverage`. The public examples are small on purpose, but this report proves the examples are executable and measured, not just copied into the repository.
+Generated from `npm run coverage`. This snapshot covers the public TypeScript examples, not the full application.
 
 ## Overall
 

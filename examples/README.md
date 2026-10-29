@@ -4,13 +4,13 @@ Small TypeScript examples that show the product logic behind the app.
 
 ## Files
 
-- [`game-session-state.ts`](game-session-state.ts) — game session reducer and scoring summary
-- [`ranking.ts`](ranking.ts) — ELO-style rating update helper
-- [`achievement-engine.ts`](achievement-engine.ts) — achievement unlock rules
-- [`roster-normalization.ts`](roster-normalization.ts) — roster cleanup and prompt candidate helpers
-- [`matchmaking.ts`](matchmaking.ts) — same-team quick-match candidate ranking
-- [`adaptive-practice.ts`](adaptive-practice.ts) — spaced-practice queue scoring with review reasons
-- [`result-validation.ts`](result-validation.ts) — server-style result validation and risk flags
+- [`game-session-state.ts`](game-session-state.ts): game session reducer and scoring summary
+- [`ranking.ts`](ranking.ts): ELO-style rating update helper
+- [`achievement-engine.ts`](achievement-engine.ts): achievement unlock rules
+- [`roster-normalization.ts`](roster-normalization.ts): roster cleanup and prompt candidate helpers
+- [`matchmaking.ts`](matchmaking.ts): same-team quick-match candidate ranking
+- [`adaptive-practice.ts`](adaptive-practice.ts): spaced-practice queue scoring with review reasons
+- [`result-validation.ts`](result-validation.ts): server-style result validation and risk flags
 
 ## What they show
 

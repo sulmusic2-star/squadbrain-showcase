@@ -1,6 +1,6 @@
 # Architecture Overview
 
-This is a high-level architecture summary for reviewing the product structure, core surfaces, and system design.
+The app uses local state for gameplay and Firebase for identity and shared data.
 
 ```mermaid
 flowchart TD
@@ -19,7 +19,7 @@ flowchart TD
 
 ## Frontend
 
-The app uses an Expo / React Native / TypeScript frontend with screen-level flows for onboarding, sport selection, gameplay, results, leaderboards, friends, achievements, and store surfaces.
+The app uses an Expo / React Native / TypeScript frontend with screens for onboarding, sport selection, gameplay, results, leaderboards, friends, achievements, and store screens.
 
 ## State model
 
@@ -43,14 +43,14 @@ The architecture uses Firebase services for identity and cloud persistence, with
 Backend concepts:
 
 - challenge records for competitive play
-- leaderboard records for rank/progression surfaces
+- leaderboard records for rank and progression screens
 - user profile records for cross-device continuity
 - server-side validation before trusted competitive updates
 - rate-limited writes for abuse resistance
 
-## Why this architecture is credible
+## Responsibilities
 
-The important engineering decision is not that the app uses Firebase. It is the division of responsibility:
+The architecture separates local and shared work:
 
 - local state keeps gameplay responsive
 - cloud state handles identity, social, and cross-device continuity

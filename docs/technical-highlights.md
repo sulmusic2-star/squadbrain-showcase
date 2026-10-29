@@ -1,16 +1,16 @@
-# Technical Highlights
+# Technical overview
 
 ## Product engineering
 
-- Built a multi-screen mobile app rather than a single demo page.
-- Structured the app around real product loops: practice, competition, progress, achievements, friends, and rankings.
-- Added iPad-aware responsive layouts instead of only testing a single phone viewport.
+- Built a mobile app with multiple screens.
+- Organized the app around practice, competition, progress, achievements, friends, and rankings.
+- Adapted the layouts for iPad as well as iPhone.
 
 ## Game systems
 
 - Multi-sport/team data model.
 - Short-session game loop built for repeat play.
-- Score, accuracy, time, and rank movement surfaces.
+- Score, accuracy, time, and rank movement displays.
 - Achievement and streak systems for retention.
 
 ## Cloud/backend systems
@@ -19,9 +19,9 @@
 - Firestore-backed social/leaderboard concepts.
 - Cloud Function layer for validation-sensitive operations.
 
-## Release/product readiness
+## Release materials
 
 - App icon and screenshot work.
 - Legal/privacy screens.
-- Store and monetization experiment surfaces.
-- Product documentation, screenshots, legal screens, and release checklists treated as part of release readiness.
+- Store screens and monetization experiments.
+- Documentation and release checklists.

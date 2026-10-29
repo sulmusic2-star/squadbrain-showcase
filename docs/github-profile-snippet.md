@@ -1,16 +1,16 @@
-# GitHub Profile Snippet
+# SquadBrain project summary
 
-Use this on a GitHub profile README or portfolio page:
+A short description for profiles and portfolios.
 
 ## Featured build: SquadBrain
 
-SquadBrain is a mobile sports roster memorization game built around short practice loops, quick-match competition, leaderboards, achievements, and friend challenges. It uses Expo/React Native, TypeScript, Firebase-backed architecture, and product packaging focused on mobile release readiness.
+SquadBrain is a mobile sports roster memorization game built around short practice loops, quick-match competition, leaderboards, achievements, and friend challenges. The application uses Expo, React Native, TypeScript and Firebase.
 
-What it demonstrates:
+The public materials cover:
 
 - mobile product design
 - React Native / Expo architecture
 - Firebase-backed social and leaderboard systems
 - ELO-style competition concepts
 - achievement / retention loops
-- release packaging and shareable documentation
+- release materials and technical documentation

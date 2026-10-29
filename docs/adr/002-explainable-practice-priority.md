@@ -2,7 +2,7 @@
 
 ## Context
 
-A memorization product can become random trivia if every prompt is selected randomly. The product needs to feel like practice, not just a quiz stream.
+Random prompt selection can spend time on cards a player already knows while missing cards that need practice.
 
 ## Decision
 
@@ -10,7 +10,7 @@ Practice cards are prioritized with visible signals: due state, miss count, stab
 
 ## Tradeoff
 
-This requires more state modeling than random selection. The benefit is a practice loop that can explain why a card appears next.
+This requires more state modeling than random selection. The selection rule can explain why each card appears next.
 
 ## Consequences
 
@@ -18,7 +18,7 @@ This requires more state modeling than random selection. The benefit is a practi
 - Recently shown cards can be penalized without disappearing.
 - Prompt mix can steer learning variety.
 
-## Public proof
+## Code and tests
 
 - [`examples/adaptive-practice.ts`](../../examples/adaptive-practice.ts)
 - [`examples/adaptive-practice.test.ts`](../../examples/adaptive-practice.test.ts)
